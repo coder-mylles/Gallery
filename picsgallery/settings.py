@@ -17,8 +17,8 @@ SECRET_KEY = '*n5m6auydxsd!12wssjq+)tsvsmzxt-k$%y81d929)+ei1+qcj'
 DEBUG = True
 ALLOWED_HOSTS = []
 # Application definition
-
 INSTALLED_APPS = [
+    'bootstrap3',
     'gallery.apps.GalleryConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,4 +39,44 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'picgallery.urls'
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates' 
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+WSGI_APPLICATION = 'picgallery.wsgi.application'
+# Database
+# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'gallery',
+        'USER': 'alufwany',
+        'PASSWORD':'alufwany',
+    }
+}
+
+	@@ -107,7 +109,7 @@
+
+LANGUAGE_CODE = 'en-us'
+
+TIME_ZONE = 'Africa/Nairobi'
+
+USE_I18N = True
+
+	@@ -120,3 +122,6 @@
+# https://docs.djangoproject.com/en/1.11/howto/static-files/
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]

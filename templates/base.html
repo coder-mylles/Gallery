@@ -1,20 +1,18 @@
 {% load bootstrap3 %}
-{% load static%}
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
-	@@ -9,13 +10,14 @@
+  <meta charset="utf-8">
+  {% if title %}
+  <title>Picture Gallery - {{title}}</title>
   {% else %}
     <title> Picture Gallery </title>
   {% endif %}
 
   {% block styles %}
     {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
   {% endblock %}
 
 </head>
-<body>
-    {% include "navbar.html" %}
-    {% block content %}{%endblock%}
-</body>
-</html>
