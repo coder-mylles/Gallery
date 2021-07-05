@@ -65,7 +65,7 @@ DATABASES = {
     }
 }
 
-	@@ -107,7 +109,7 @@
+	
 
 LANGUAGE_CODE = 'en-us'
 
@@ -73,11 +73,10 @@ TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
-	@@ -120,3 +122,6 @@
+	
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-z
