@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = []
+
 
 
 # Application definition
@@ -79,8 +79,8 @@ WSGI_APPLICATION = 'picgallery.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-MODE=config("MODE", default="dev")
-DEBUG = config('DEBUG', default=True, cast=bool)
+
+DEBUG = True
 # development
 if config('MODE')=="dev":
    DATABASES = {
