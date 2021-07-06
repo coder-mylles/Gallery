@@ -1,4 +1,6 @@
-#!/home/alufwany/Documents/picture-gallery/virtual/bin/python
+#!/bin/sh
+'''exec' "/home/martin/Documents/moringa-school-projects/Python     (Django)/personal gallery/virtual/bin/python" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys
